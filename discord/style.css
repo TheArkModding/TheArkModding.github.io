@@ -1,0 +1,21 @@
+/* Set the default background color */
+body {
+    background-color: #0A0A0A;
+    margin: 0;
+    padding: 0;
+}
+
+/* Set the background image */
+html {
+    height: 100%;
+}
+
+body {
+    background-image: url('images/bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
+}
+ 
