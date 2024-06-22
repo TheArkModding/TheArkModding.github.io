@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Arcadia - HW2Dumper</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="New Arcadia, HW2Dumper, Modding Community, mods, Halo Wars Modding, Halo Wars, Halo Wars 2">
+    <meta name="author" content="The Ark Modding Team">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/fav.ico" type="image/x-icon">
+</head>
+<body>
+    <script>
+        async function redirectToLatestRelease() {
+            try {
+                const response = await fetch('https://api.github.com/repos/TheArkModding/HW2Dumper/releases/latest');
+                const data = await response.json();
+                const downloadUrl = data.assets[0].browser_download_url;
+                window.location.href = downloadUrl;
+            } catch (error) {
+                console.error('Error fetching the latest release:', error);
+            }
+        }
+
+        redirectToLatestRelease();
+    </script>
+</body>
+</html>
